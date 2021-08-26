@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <label for="">enter price</label>
+        <input type="text" id="prc">
+    </div>
+    <div class="container">
+        <label for="">enter quantity</label>
+        <input type="text" id="qnt">
+    </div>
+    <div class="container">
+        <label for="">enter tax</label>
+        <input type="text" id="temp">
+    </div>
+    <div class="container">
+        <label for="">total amount</label>
+        <input type="text" id="amt">
+    </div>
+    <div>
+        <button id="btn">Pay</button>
+    </div>
+    <style>
+        .container{
+            border: 1px solid;
+            padding: 5px;
+        }
+    </style>
+    
+    <script>
+        function shop(){
+            var x = parseInt(document.getElementById("prc").value)
+            var y = parseInt(document.getElementById("qnt").value)
+            var z = parseInt(document.getElementById("temp").value)
+            // var total = parseInt((x*y)-z/100);
+            result = parseInt(x*y);
+            tax = parseInt (result*(z/100))
+            total = parseInt(result-tax)
+            console.log(total);
+            document.getElementById("amt").value = total;
+
+        }
+        document.getElementById("btn").addEventListener("click",shop)
+    </script>
+</body>
+</html>
