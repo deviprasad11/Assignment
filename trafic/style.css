@@ -1,0 +1,37 @@
+#new{
+    height: 25px;
+    width: 25px;
+    background:;
+    border-radius: 50%;
+    display: inline-flexbox;
+    padding: 15px;
+
+}
+#yelw{
+    height: 25px;
+    width: 25px;
+    background: ;
+    border-radius: 50%;
+    display: inline-flexbox;
+    padding: 15px;
+    
+
+}
+#grn{
+    height: 25px;
+    width: 25px;
+    background: ;
+    border-radius: 50%;
+    display: inline-flexbox;
+    padding: 15px;
+    
+}
+.container{
+    height: 30%;
+    width: 9%;
+    background-color: black;
+    position: absolute;
+    top: 20%;
+    right: 50%;
+}
+
