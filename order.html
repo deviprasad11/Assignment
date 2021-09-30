@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 100px;
+            width: 250px;
+            border: 2px solid black;
+            float: left;
+        }
+
+        .box {
+            height: 100px;
+            width: 150px;
+            border: 2px solid black;
+            position: absolute;
+            right: 550px;
+        }
+        .box2 {
+            height: 80px;
+            width: 250px;
+            border: 2px solid black;
+            float: right;
+        }
+        .cal {
+            height: 180px;
+            width: 450px;
+            margin-top: 250px;
+            border: 2px solid black;
+            float: left;
+        }
+     
+     
+    </style>
+</head>
+
+<body>
+    <span class="container" >
+        <lebel>Lunch</lebel>
+        <select name="" id="lunch" onchange="getlunch();">
+            <option value="150">pizaa</option>
+            <option value="80">burger</option>
+            <option value="50">rice</option>
+            <option value="45">dal</option>
+            <option value="10">roti</option>
+        </select>
+    </span>
+    <span class="box">
+        <lebel>Dinner</lebel>
+        <select name="" id="dinner" onchange="getdinner();">
+            <option value="120">sabji</option>
+            <option value="55">fried rice</option>
+            <option value="50">rice</option>
+            <option value="45">dal</option>
+            <option value="10">roti</option>
+        </select>
+    </span>
+    <span class="box2">
+        <lebel>Gift dish</lebel>
+        <select name="" id="gift" onchange="getgift();">
+            <option value="45">cold drinks</option>
+            <option value="25">lassi</option>
+            <option value="15">cold cofee</option>
+        </select>
+    </span>
+ 
+        <div class="cal" >
+            <p>Total items selected</p><br>
+            <p>Total price</p>
+            <button onclick="clear()">Clear</button>
+            <button onclick="calculate()">Total price</button>
+        </div>
+   <script>
+       var arr=[];
+    //    function calculate(){
+       function getdinner(){
+       var itm = document.getElementById("lunch").value;
+         arr.push(itm);
+       console.log(arr);
+       }
+
+       var arr=[];
+       function getlunch(){
+       var itm = document.getElementById("dinner").value;
+          arr.push(itm);
+       console.log(arr);
+       }
+
+       var arr=[];
+       function getgift(){
+       var itm = document.getElementById("gift").value;
+          arr.push(itm);
+       console.log(arr);
+       }
+     
+    // }
+    // calculate()
+      
+   </script>
+</body>
+
+</html>
